@@ -1,0 +1,104 @@
+// config
+@import "config/_variable.scss";
+@import "config/_reset.scss";
+@import "config/_mixin.scss";
+
+// parts
+@import "parts/header";
+
+// common
+html,
+body {
+}
+body {
+  overflow-x: hidden;
+}
+
+.cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: $easefive;
+  transform-origin: 100% 100%;
+  z-index: 999999;
+  border-radius: 50%;
+  @include flexbox;
+
+  &.cursor__first {
+    width: 1rem;
+    height: 1rem;
+    background-color: $white;
+    transition-property: background, transform;
+
+    &.cursor__link {
+      transform: scale(0);
+    }
+  }
+  &.cursor__second {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid $white;
+
+    &.cursor__link {
+      transition-property: background, transform;
+      background-color: $white;
+      transform: scale(2);
+    }
+  }
+}
+
+main {
+  height: 100vh;
+  background-color: $black;
+  color: $white;
+
+  a {
+    display: block;
+    color: $white;
+    padding: 2rem;
+  }
+}
+
+//
+// css custom
+//
+::selection {
+  background-color: $black;
+  color: $white;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html,
+.comment-container .comment-output-container,
+textarea {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar,
+.comment-container .comment-output-container::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-track,
+.comment-container .comment-output-container::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb,
+.comment-container .comment-output-container::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  border-left: 0;
+  border-right: 0;
+  background-color: $black;
+}
+
+footer {
+  @include flexbox;
+  background-color: $white;
+  width: 100%;
+}
