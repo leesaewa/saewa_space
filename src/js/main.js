@@ -24,5 +24,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // global nav
+  const navBtn = document.querySelector(".hamburger-btn");
+  const globalnav = document.querySelector(".global-nav");
+
+  navBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!globalnav.classList.contains("global-nav--open")) {
+      globalnav.classList.add("global-nav--open");
+      navBtn.classList.add("hamburger-btn-open");
+    } else {
+      globalnav.classList.remove("global-nav--open");
+      navBtn.classList.remove("hamburger-btn-open");
+    }
+  });
+
   //
 });

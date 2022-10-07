@@ -1,6 +1,99 @@
 header {
-  @include flexbox;
+  @include flexbox($flexJC: space-between);
+  position: relative;
   background-color: $white;
   width: 100%;
   padding: 2rem;
+  z-index: 5;
+
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .hamburger-btn {
+    font-size: 0;
+    position: relative;
+    width: 50px;
+    height: 24px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $black;
+      position: absolute;
+      right: 0;
+      transition: $cubic;
+    }
+
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+
+    // hamburger button click
+    &.hamburger-btn-open {
+      &::before {
+        transform: rotate(45deg) translate3d(0, -50%, 0);
+        top: 50%;
+      }
+      &::after {
+        transform: rotate(-45deg) translate3d(0, -50%, 0);
+        bottom: 36%;
+      }
+    }
+  }
+
+  .global-nav {
+    @include flexbox;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    border: 1px solid red;
+    z-index: -5;
+    transition: $cubic;
+    transform: translate3d(0, -100%, 0);
+
+    &.global-nav--open {
+      transform: translate3d(0, 0, 0);
+
+      .global-nav__list {
+        li {
+          a {
+            transition: $cubic;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+    }
+
+    .global-nav__list {
+      @include flexbox($flexW: wrap);
+      width: 100%;
+      padding: 0 2rem;
+
+      li {
+        display: block;
+        font-size: 6em;
+        width: 100%;
+        border-bottom: 1px solid red;
+        text-align: center;
+
+        transition: $cubic;
+        transform: translate3d(0, -100%, 0);
+
+        &.sub {
+        }
+      }
+    }
+  }
 }

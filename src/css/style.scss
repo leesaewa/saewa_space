@@ -2,6 +2,7 @@
 @import "config/_variable.scss";
 @import "config/_reset.scss";
 @import "config/_mixin.scss";
+@import "config/_animation.scss";
 
 // parts
 @import "parts/header";
@@ -9,10 +10,19 @@
 // common
 html,
 body {
+  height: 100%;
 }
 body {
   overflow-x: hidden;
 }
+
+.eng {
+  font-family: "Raleway", sans-serif;
+}
+
+//
+// cursor custom
+//
 
 .cursor {
   position: absolute;
@@ -97,6 +107,9 @@ textarea::-webkit-scrollbar-thumb {
   background-color: $black;
 }
 
+//
+// footer
+//
 footer {
   @include flexbox;
   background-color: $white;
