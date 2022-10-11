@@ -1,51 +1,67 @@
 header {
-  @include flexbox($flexJC: space-between);
-  position: relative;
-  background-color: $white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  transition: $easefive;
   width: 100%;
-  padding: 2rem;
+
   z-index: 5;
 
-  h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
+  // header fixed
+  &.fixed {
+    .main-navbar {
+      padding: 1rem 2rem;
+    }
   }
 
-  .hamburger-btn {
-    font-size: 0;
+  .main-navbar {
+    @include flexbox($flexJC: space-between);
     position: relative;
-    width: 50px;
-    height: 24px;
-    cursor: pointer;
+    transition: $easefive;
+    width: 100%;
+    padding: 2rem;
+    backdrop-filter: saturate(180%) blur(15px);
 
-    &::before,
-    &::after {
-      content: "";
-      width: 100%;
-      height: 3px;
-      background-color: $black;
-      position: absolute;
-      right: 0;
-      transition: $cubic;
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
+    .hamburger-btn {
+      font-size: 0;
+      position: relative;
+      width: 50px;
+      height: 24px;
+      cursor: pointer;
 
-    // hamburger button click
-    &.hamburger-btn-open {
+      &::before,
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $black;
+        position: absolute;
+        right: 0;
+        transition: $cubic;
+      }
+
       &::before {
-        transform: rotate(45deg) translate3d(0, -50%, 0);
-        top: 50%;
+        top: 0;
       }
       &::after {
-        transform: rotate(-45deg) translate3d(0, -50%, 0);
-        bottom: 36%;
+        bottom: 0;
+      }
+
+      // hamburger button click
+      &.hamburger-btn-open {
+        &::before {
+          transform: rotate(45deg) translate3d(0, -50%, 0);
+          top: 50%;
+        }
+        &::after {
+          transform: rotate(-45deg) translate3d(0, -50%, 0);
+          bottom: 36%;
+        }
       }
     }
   }
@@ -58,7 +74,6 @@ header {
     width: 100%;
     height: 100vh;
     background-color: $white;
-    border: 1px solid red;
     z-index: -5;
     transition: $cubic;
     transform: translate3d(0, -100%, 0);

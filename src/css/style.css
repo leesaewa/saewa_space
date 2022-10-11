@@ -146,29 +146,51 @@ button {
   all: unset;
 }
 
-@-webkit-keyframes header {
+@-webkit-keyframes fadeIn {
   0% {
-    -webkit-transform: 0;
-            transform: 0;
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-@keyframes header {
+@keyframes fadeIn {
   0% {
-    -webkit-transform: 0;
-            transform: 0;
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
   }
   100% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
 }
 
 header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+  z-index: 5;
+}
+
+header.fixed .main-navbar {
+  padding: 1rem 2rem;
+}
+
+header .main-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,19 +203,21 @@ header {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  background-color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   width: 100%;
   padding: 2rem;
-  z-index: 5;
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+          backdrop-filter: saturate(180%) blur(15px);
 }
 
-header h1 {
+header .main-navbar h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-header .hamburger-btn {
+header .main-navbar .hamburger-btn {
   font-size: 0;
   position: relative;
   width: 50px;
@@ -201,7 +225,7 @@ header .hamburger-btn {
   cursor: pointer;
 }
 
-header .hamburger-btn::before, header .hamburger-btn::after {
+header .main-navbar .hamburger-btn::before, header .main-navbar .hamburger-btn::after {
   content: "";
   width: 100%;
   height: 3px;
@@ -212,21 +236,21 @@ header .hamburger-btn::before, header .hamburger-btn::after {
   transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-header .hamburger-btn::before {
+header .main-navbar .hamburger-btn::before {
   top: 0;
 }
 
-header .hamburger-btn::after {
+header .main-navbar .hamburger-btn::after {
   bottom: 0;
 }
 
-header .hamburger-btn.hamburger-btn-open::before {
+header .main-navbar .hamburger-btn.hamburger-btn-open::before {
   -webkit-transform: rotate(45deg) translate3d(0, -50%, 0);
           transform: rotate(45deg) translate3d(0, -50%, 0);
   top: 50%;
 }
 
-header .hamburger-btn.hamburger-btn-open::after {
+header .main-navbar .hamburger-btn.hamburger-btn-open::after {
   -webkit-transform: rotate(-45deg) translate3d(0, -50%, 0);
           transform: rotate(-45deg) translate3d(0, -50%, 0);
   bottom: 36%;
@@ -250,7 +274,6 @@ header .global-nav {
   width: 100%;
   height: 100vh;
   background-color: #fff;
-  border: 1px solid red;
   z-index: -5;
   -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -368,7 +391,7 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: 150vh;
   background-color: #121212;
   color: #fff;
 }
