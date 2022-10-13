@@ -10,6 +10,7 @@
 
 - `logo` -> `gradient` animation 추가
 - `contact form` 붙여넣기 (`Formspree` 사용함)
+- `scroll top` 형태만 만들어둠. (변경 가능성이 큼)
 
 ### 221011
 

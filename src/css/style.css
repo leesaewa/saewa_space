@@ -453,9 +453,7 @@ footer form p {
 }
 
 footer form fieldset {
-  width: 50%;
   padding: 2rem 0;
-  margin: 0 auto;
   text-align: left;
 }
 
@@ -497,6 +495,8 @@ footer form fieldset .input-box textarea {
   padding: 6px;
   font-size: 1rem;
   border-radius: 6px;
+  height: 20vh;
+  resize: none;
 }
 
 footer small {
@@ -507,9 +507,26 @@ footer small {
 }
 
 #scrollTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   bottom: 10px;
   right: 10px;
+  background-color: #363062;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 * {
