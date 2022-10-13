@@ -4,6 +4,12 @@
 
 ## log
 
+### 221013
+
+#### HTML, CSS
+
+- `logo` -> `gradient` animation 추가
+
 ### 221011
 
 #### Javascript, HTML, CSS

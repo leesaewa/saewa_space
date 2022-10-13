@@ -25,6 +25,48 @@ header {
       font-size: 2rem;
       text-transform: uppercase;
       font-weight: 700;
+      background: linear-gradient(
+        64deg,
+        #2c73d2,
+        #538def,
+        #656dc8,
+        #8467bc,
+        #9a62ad,
+        #b15e8f,
+        #009ce9,
+        #00bedb,
+        #8290bb,
+        #a6abbd,
+        #ff7b95,
+        #db285e
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 800% 200%;
+      animation: logoAni 10s linear infinite;
+
+      a {
+        @include flexbox;
+
+        p {
+          font-size: 3.2em;
+          font-weight: bold;
+        }
+        div {
+          @include flexbox($flexW: wrap, $flexAC: flex-start);
+          flex-direction: column;
+          margin-left: 3px;
+
+          span {
+            font-weight: 900;
+            font-size: 1.2em;
+
+            &:last-child {
+              font-size: 1.4em;
+            }
+          }
+        }
+      }
     }
 
     .hamburger-btn {

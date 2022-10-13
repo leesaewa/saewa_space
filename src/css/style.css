@@ -177,7 +177,33 @@ button {
           animation: fadeIn 1s ease-in-out;
 }
 
-header {
+@-webkit-keyframes logoAni {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes logoAni {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes logoCircle {}
+
+@keyframes logoCircle {}header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   -webkit-transition: all 0.5s ease;
@@ -215,6 +241,59 @@ header .main-navbar h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+  background: linear-gradient(64deg, #2c73d2, #538def, #656dc8, #8467bc, #9a62ad, #b15e8f, #009ce9, #00bedb, #8290bb, #a6abbd, #ff7b95, #db285e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800% 200%;
+  -webkit-animation: logoAni 10s linear infinite;
+          animation: logoAni 10s linear infinite;
+}
+
+header .main-navbar h1 a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main-navbar h1 a p {
+  font-size: 3.2em;
+  font-weight: bold;
+}
+
+header .main-navbar h1 a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 3px;
+}
+
+header .main-navbar h1 a div span {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+header .main-navbar h1 a div span:last-child {
+  font-size: 1.4em;
 }
 
 header .main-navbar .hamburger-btn {
