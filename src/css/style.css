@@ -426,6 +426,10 @@ header .global-nav .global-nav__list li {
 }
 
 footer {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: -1;
+  bottom: 0;
   background-color: #fff;
   width: 100%;
   max-width: 1200px;
@@ -605,7 +609,6 @@ body {
 }
 
 main {
-  height: 80vh;
   background-color: #121212;
   color: #fff;
 }

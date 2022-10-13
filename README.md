@@ -4,6 +4,12 @@
 
 ## log
 
+### 221014
+
+#### HTML, CSS
+
+- `footer` -> `sticky footer` 효과 추가
+
 ### 221013
 
 #### HTML, CSS

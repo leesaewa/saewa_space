@@ -2,7 +2,9 @@
 // footer
 //
 footer {
-  // @include flexbox;
+  position: sticky;
+  z-index: -1;
+  bottom: 0;
   background-color: $white;
   @include widthSize($padTB: 2rem);
 
