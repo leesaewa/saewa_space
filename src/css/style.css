@@ -86,7 +86,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font-family: "Hahmlet", serif;
   font-size: 1rem;
   font-weight: 400;
@@ -144,6 +143,32 @@ a:hover {
 
 button {
   all: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  background-color: #121212;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 10px 8px;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #363062;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+input,
+textarea {
+  font-family: "Hahmlet", serif;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 @-webkit-keyframes fadeIn {
@@ -400,6 +425,99 @@ header .global-nav .global-nav__list li {
           transform: translate3d(0, -100%, 0);
 }
 
+footer {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+footer form {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+footer form legend {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.4rem;
+  padding: 2rem 0;
+}
+
+footer form p {
+  font-size: 1.4em;
+  line-height: 2rem;
+}
+
+footer form fieldset {
+  width: 50%;
+  padding: 2rem 0;
+  margin: 0 auto;
+  text-align: left;
+}
+
+footer form fieldset .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer form fieldset .input-box:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+footer form fieldset .input-box label {
+  width: 200px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+footer form fieldset .input-box input {
+  width: 100%;
+  border: 1px solid #121212;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+footer form fieldset .input-box textarea {
+  width: 100%;
+  border: 1px solid #121212;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+footer small {
+  display: block;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #121212;
+}
+
+#scrollTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: none;
+}
+
 html,
 body {
   height: 100%;
@@ -470,7 +588,7 @@ body {
 }
 
 main {
-  height: 150vh;
+  height: 80vh;
   background-color: #121212;
   color: #fff;
 }
@@ -489,12 +607,6 @@ main a {
 ::selection {
   background-color: #121212;
   color: #fff;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: none;
 }
 
 html,
@@ -522,20 +634,4 @@ textarea::-webkit-scrollbar-thumb {
   border-left: 0;
   border-right: 0;
   background-color: #121212;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #fff;
-  width: 100%;
 }

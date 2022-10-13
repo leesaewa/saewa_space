@@ -6,6 +6,12 @@
 
 // parts
 @import "parts/header";
+@import "parts/footer";
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
 
 // common
 html,
@@ -59,7 +65,7 @@ body {
 }
 
 main {
-  height: 150vh;
+  height: 80vh;
   background-color: $black;
   color: $white;
 
@@ -76,11 +82,6 @@ main {
 ::selection {
   background-color: $black;
   color: $white;
-}
-
-* {
-  box-sizing: border-box;
-  cursor: none;
 }
 
 html,
@@ -105,17 +106,4 @@ textarea::-webkit-scrollbar-thumb {
   border-left: 0;
   border-right: 0;
   background-color: $black;
-}
-
-//
-// footer
-//
-footer {
-  @include flexbox;
-  background-color: $white;
-  width: 100%;
-}
-
-#scrollTop {
-  
 }

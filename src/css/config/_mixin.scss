@@ -4,3 +4,19 @@
   justify-content: $flexJC;
   align-items: $flexAC;
 }
+
+@mixin widthSize($widthSize: 1200px, $padTB: 0, $padLR: 0) {
+  width: 100%;
+  max-width: $widthSize;
+  text-align: center;
+  margin: 0 auto;
+  padding: $padTB $padLR;
+}
+
+@mixin contactForm {
+  width: 100%;
+  border: 1px solid $black;
+  padding: 6px;
+  font-size: 1rem;
+  border-radius: 6px;
+}

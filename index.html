@@ -65,12 +65,41 @@
 
     <!-- footer -->
     <footer class="eff">
-      <form action="">
-        <legend>Get In Touch</legend>
-        <fieldset></fieldset>
+      <form action="https://formspree.io/f/xeqdzvpp" method="POST">
+        <legend class="eng">Get In Touch</legend>
+        <p class="eng">
+          Thank you for your interest in getting in touch me. Please send your
+          message here. I will reply as soon as possible!
+        </p>
+        <fieldset>
+          <div class="input-box">
+            <label class="eng" for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="input-box">
+            <label class="eng" for="email">Your email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="input-box">
+            <label class="eng" for="title">Title</label>
+            <input type="text" name="title" id="title" required />
+          </div>
+
+          <div class="input-box">
+            <label class="eng" for="message">Your message</label>
+            <textarea name="message" id="message" required></textarea>
+          </div>
+
+          <!-- your other form fields go here -->
+          <button type="submit" class="eng">Send</button>
+        </fieldset>
       </form>
 
-      Copyright © 2022 saewa's portfolio All Rights Reserved.
+      <small class="eng">
+        Copyright © 2022 saewa's portfolio All Rights Reserved.
+      </small>
     </footer>
     <!-- //footer -->
 

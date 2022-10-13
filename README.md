@@ -9,6 +9,7 @@
 #### HTML, CSS
 
 - `logo` -> `gradient` animation 추가
+- `contact form` 붙여넣기 (`Formspree` 사용함)
 
 ### 221011
 
