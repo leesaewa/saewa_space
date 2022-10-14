@@ -9,6 +9,7 @@
 #### HTML, CSS
 
 - `footer` -> `sticky footer` 효과 추가
+- `svg` -> TOP `wave` 효과 추가
 
 ### 221013
 

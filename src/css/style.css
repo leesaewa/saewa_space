@@ -226,9 +226,79 @@ textarea {
   }
 }
 
-@-webkit-keyframes logoCircle {}
+.visual-wrap {
+  padding-top: 50vh;
+}
 
-@keyframes logoCircle {}header {
+.visual-wrap svg {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.visual-wrap svg g use {
+  -webkit-animation: waveAni 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: waveAni 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  fill: #fff;
+}
+
+.visual-wrap svg g use:nth-child(1) {
+  opacity: 0.7;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+.visual-wrap svg g use:nth-child(2) {
+  opacity: 0.5;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.visual-wrap svg g use:nth-child(3) {
+  opacity: 0.3;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+.visual-wrap svg g use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+@-webkit-keyframes waveAni {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes waveAni {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   -webkit-transition: all 0.5s ease;
