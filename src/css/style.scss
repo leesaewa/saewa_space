@@ -6,6 +6,7 @@
 
 // parts
 @import "parts/header";
+@import "parts/main";
 @import "parts/footer";
 
 * {
@@ -65,12 +66,12 @@ body {
 }
 
 main {
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
 
   a {
     display: block;
-    color: $white;
+    color: $black;
     padding: 2rem;
   }
 }

@@ -4,6 +4,14 @@
 
 ## log
 
+### 221015
+
+#### Javascript, HTML, CSS
+
+- `main visual` 구성만 해둠.
+- `scroll top` JS로 스크롤 내릴 때만 나오도록 추가하고, `header` 스크롤 js와 병합시킴.
+- 오른쪽 하단에 `floating button` 추가했으나, 고민중.
+
 ### 221014
 
 #### HTML, CSS

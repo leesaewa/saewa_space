@@ -226,26 +226,22 @@ textarea {
   }
 }
 
-.visual-wrap {
-  padding-top: 50vh;
-}
-
-.visual-wrap svg {
-  position: relative;
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 50vh;
+  height: 150px;
   margin-bottom: -7px;
-  min-height: 100px;
-  max-height: 150px;
 }
 
-.visual-wrap svg g use {
+.waves g use {
   -webkit-animation: waveAni 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
           animation: waveAni 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
   fill: #fff;
 }
 
-.visual-wrap svg g use:nth-child(1) {
+.waves g use:nth-child(1) {
   opacity: 0.7;
   -webkit-animation-delay: -2s;
           animation-delay: -2s;
@@ -253,7 +249,7 @@ textarea {
           animation-duration: 7s;
 }
 
-.visual-wrap svg g use:nth-child(2) {
+.waves g use:nth-child(2) {
   opacity: 0.5;
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
@@ -261,7 +257,7 @@ textarea {
           animation-duration: 10s;
 }
 
-.visual-wrap svg g use:nth-child(3) {
+.waves g use:nth-child(3) {
   opacity: 0.3;
   -webkit-animation-delay: -4s;
           animation-delay: -4s;
@@ -269,7 +265,7 @@ textarea {
           animation-duration: 13s;
 }
 
-.visual-wrap svg g use:nth-child(4) {
+.waves g use:nth-child(4) {
   -webkit-animation-delay: -5s;
           animation-delay: -5s;
   -webkit-animation-duration: 20s;
@@ -495,6 +491,13 @@ header .global-nav .global-nav__list li {
           transform: translate3d(0, -100%, 0);
 }
 
+.visual-wrap {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+}
+
 footer {
   position: -webkit-sticky;
   position: sticky;
@@ -580,7 +583,13 @@ footer small {
   border-top: 1px solid #121212;
 }
 
-#scrollTop {
+.floating-nav {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.floating-nav .floating-nav__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -592,14 +601,12 @@ footer small {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
   background-color: #363062;
   color: #fff;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  opacity: 0;
   z-index: 1;
 }
 
@@ -679,13 +686,13 @@ body {
 }
 
 main {
-  background-color: #121212;
-  color: #fff;
+  background-color: #fff;
+  color: #121212;
 }
 
 main a {
   display: block;
-  color: #fff;
+  color: #121212;
   padding: 2rem;
 }
 
