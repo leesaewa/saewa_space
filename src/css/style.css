@@ -231,7 +231,7 @@ textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 170px;
   margin-bottom: -7px;
 }
 
@@ -493,9 +493,94 @@ header .global-nav .global-nav__list li {
 
 .visual-wrap {
   position: relative;
-  height: 100vh;
   width: 100%;
   background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+  padding-top: 50vh;
+  border: 1px solid red;
+}
+
+.visual-wrap .sticky-box {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.visual-wrap .sticky-box canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.visual-wrap .main-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  font-size: 2.5rem;
+  top: 35vh;
+}
+
+.visual-wrap .scroll-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 8%;
+  left: 10%;
+  background-color: #363062;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-animation: test 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite alternate;
+          animation: test 2s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite alternate;
+}
+
+.visual-wrap .scroll-down span {
+  font-size: 2em;
+}
+
+@-webkit-keyframes test {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@keyframes test {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
 }
 
 footer {
@@ -615,6 +700,7 @@ footer small {
 
 .floating-nav ul li a:hover .tooltip {
   opacity: 1;
+  visibility: visible;
 }
 
 .floating-nav ul li a .tooltip {
@@ -632,6 +718,7 @@ footer small {
   font-size: 0.8rem;
   letter-spacing: 4px;
   opacity: 0;
+  visibility: hidden;
 }
 
 .floating-nav ul li a .tooltip::after {

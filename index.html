@@ -44,7 +44,7 @@
 
       <nav class="global-nav">
         <ul class="global-nav__list">
-          <li><a href="" class="eff">Home</a></li>
+          <li><a href="/index.html" class="eff">Home</a></li>
           <li class="sub">
             <span>Work</span>
           </li>
@@ -57,7 +57,11 @@
 
     <!-- contents -->
     <main>
-      <section class="visual-wrap">
+      <article>
+        <div class="scroll-down">
+          <span class="material-icons">arrow_downward</span>
+        </div>
+
         <svg
           class="waves"
           viewBox="0 24 150 28"
@@ -80,6 +84,15 @@
             <use xlink:href="#wave" x="48" y="7"></use>
           </g>
         </svg>
+      </article>
+
+      <section class="visual-wrap" id="scrollSection">
+        <div class="sticky-box">
+          <canvas id="video-canvas-0" width="1920" height="1080"></canvas>
+        </div>
+        <div class="sticky-box main-message a">
+          <p>온전히 빠져들게 하는<br />최고급 세라믹</p>
+        </div>
       </section>
 
       <section>
@@ -189,5 +202,6 @@
 
     <!-- main JS -->
     <script src="src/js/main.js"></script>
+    <script src="src/js/parallax.js"></script>
   </body>
 </html>

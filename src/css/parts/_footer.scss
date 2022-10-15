@@ -90,6 +90,7 @@ footer {
 
         &:hover .tooltip {
           opacity: 1;
+          visibility: visible;
         }
 
         .tooltip {
@@ -106,6 +107,7 @@ footer {
           font-size: 0.8rem;
           letter-spacing: 4px;
           opacity: 0;
+          visibility: hidden;
 
           &::after {
             content: "";
