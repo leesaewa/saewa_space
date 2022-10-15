@@ -589,7 +589,11 @@ footer small {
   right: 10px;
 }
 
-.floating-nav .floating-nav__top {
+.floating-nav ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.floating-nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,13 +605,61 @@ footer small {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #363062;
-  color: #fff;
+  position: relative;
   width: 50px;
   height: 50px;
+  color: #fff;
   border-radius: 50%;
-  opacity: 0;
   z-index: 1;
+}
+
+.floating-nav ul li a:hover .tooltip {
+  opacity: 1;
+}
+
+.floating-nav ul li a .tooltip {
+  background-color: #121212;
+  padding: 6px 8px 4px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 30%;
+  right: 120%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  opacity: 0;
+}
+
+.floating-nav ul li a .tooltip::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent #121212;
+}
+
+.floating-nav ul li a.floating-nav__lang {
+  background-color: #121212;
+}
+
+.floating-nav ul li a.floating-nav__mode {
+  background-color: #121212;
+}
+
+.floating-nav ul li a.floating-nav__mode .tooltip {
+  bottom: 15%;
+}
+
+.floating-nav ul li a.floating-nav__top {
+  background-color: #363062;
+  opacity: 0;
 }
 
 * {
